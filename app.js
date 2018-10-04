@@ -1,5 +1,5 @@
 //genearte the picture basedon the users click
-//testing
+//testing 
 
 $(".headshot").on("click", function(e){
     if(e.currentTarget.alt === "Brett") {
