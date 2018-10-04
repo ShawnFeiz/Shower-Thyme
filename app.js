@@ -1,3 +1,5 @@
+//genearte the picture basedon the users click
+
 $(".headshot").on("click", function(e){
     if(e.currentTarget.alt === "Brett") {
         $(".showerPic").empty();
