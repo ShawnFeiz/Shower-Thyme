@@ -1,0 +1,40 @@
+body {
+    background-image: url("Thyme.jpg");
+    background-size: 100% 165%;
+}
+
+.shower {
+    font-family: 'Abril Fatface', cursive;
+}
+
+.thyme {
+    font-family: 'Charmonman', cursive;
+}
+
+.shower, .thyme {
+    letter-spacing: 9px;
+}
+
+.picture1, .picture2, .picture3 {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.showerPic {
+    margin: 0 auto;
+    /* background-color: white; */
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.jumbotron {
+    background-color: transparent;
+    color: #85c05d;
+}
+
+.jumbotron .shower {
+    color: #ccc;
+}
