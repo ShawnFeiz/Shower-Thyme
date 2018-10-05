@@ -3,6 +3,10 @@ body {
     background-size: 100% 165%;
 }
 
+/* .pageHeader {
+
+} */
+
 .shower {
     font-family: 'Abril Fatface', cursive;
 }
@@ -24,7 +28,6 @@ body {
 
 .showerPic {
     margin: 0 auto;
-    /* background-color: white; */
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -33,6 +36,7 @@ body {
 .jumbotron {
     background-color: transparent;
     color: #85c05d;
+    padding-top: 20px;
 }
 
 .jumbotron .shower {
