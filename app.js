@@ -11,27 +11,21 @@ var config = {
 
   var database = firebase.database();
 
-
-//if the JSON name changes then display a different picture
-//Set the default value of "personShowering" to "nothing"
-
-//on click of a picture, update firebase and pull that down for the picture
-
-
-
   database.ref().on("value", function(snapshot) {
+    
+    if(snapshot.val().personShowering === "") {
+        var fbPerson = "open";
+    } else {
+        var fbPerson = snapshot.val().personShowering;
+    }
 
-    let fbPerson = snapshot.val().personShowering;
     $(".showerPic").empty();
     var pic = $("<img>");
-    // pic.attr("src", "./pics/Brett.png");
     pic.attr("src", "./pics/" + fbPerson + ".png");
 
     pic.addClass("showerPic mainPic");
     $(".showerPic").append(pic);
 
-    // Change the HTML
-    // $("#displayed-data").text(snapshot.val().name + " | " + snapshot.val().age + " | " + snapshot.val().phone);
 
     // If any errors are experienced, log them to console.
   }, function(errorObject) {
@@ -39,12 +33,11 @@ var config = {
   });
 
 
-
 function setFirebaseName(a) {
     database.ref().set({
     personShowering: a
     });
-}
+};
 
 
 $(".headshot").on("click", function(e){
@@ -79,4 +72,7 @@ $(".headshot").on("click", function(e){
 
 $(".showerPic").on("click", function(){
     $(".mainPic").remove();
-})
+    database.ref().set({
+        personShowering: ""
+        });
+    });
