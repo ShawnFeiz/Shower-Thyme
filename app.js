@@ -11,7 +11,7 @@ var config = {
 
   var database = firebase.database();
 
-  var number = 900;
+  var number = 1080;
 
   database.ref().on("value", function(snapshot) {
     if(snapshot.val().personShowering === "") {
@@ -57,6 +57,7 @@ $(".headshot").on("click", function(e){
         pic.attr("src", "./pics/Daniel.png");
         pic.addClass("showerPic mainPic");
         $(".showerPic").append(pic);
+        showerTimeUp();
     }
     else if(e.currentTarget.alt === "Shawn") {
         let personShowering = e.currentTarget.alt;
@@ -66,6 +67,7 @@ $(".headshot").on("click", function(e){
         pic.attr("src", "./pics/Shawn.png");
         pic.addClass("showerPic mainPic");
         $(".showerPic").append(pic);
+        showerTimeUp();
     }
 });
 
