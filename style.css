@@ -16,8 +16,8 @@ body {
 }
 
 .picture1, .picture2, .picture3 {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     margin: 0 auto;
 }
